@@ -34,7 +34,8 @@
 	            <input placeholder="Password" class="uk-input" type="password">
 	        </div>
 	    </div>
-
+		<div style="display:none"class="uk-margin uk-alert uk-alert-danger js-error">
+	</div>
 	    <div class="uk-margin">
 	        <button class="uk-button uk-button-default">Login </button>
 	    </div>
