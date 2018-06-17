@@ -1,9 +1,9 @@
 <?php 
-//allow the config
-define('__CONFIG__',true);
-//require the config
-require("inc/config.php");
-
+	//allow the config
+	define('__CONFIG__',true);
+	//require the config
+	require("inc/config.php");
+	
 ?>
 
 <!DOCTYPE html>

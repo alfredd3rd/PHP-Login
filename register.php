@@ -1,3 +1,11 @@
+
+<?php 
+	//allow the config
+	define('__CONFIG__',true);
+	//require the config
+	require("inc/config.php");
+	
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,6 +35,9 @@
 	        </div>
 	    </div>
 
+	<div style="display:none"class="uk-margin uk-alert uk-alert-danger js-error">
+		test
+	</div>
 	    <div class="uk-margin">
 	        <button class="uk-button uk-button-default">Register </button>
 	    </div>
@@ -34,10 +45,10 @@
 	</form>
 
 </div>
-<!-- jQuery is required -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!-- UIkit JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/js/uikit.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/js/uikit-icons.min.js"></script>
+<?php 
+require_once "inc/footer.php" 
+
+
+?>
 </body>
 </html>
