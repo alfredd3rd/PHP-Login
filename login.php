@@ -4,7 +4,8 @@
 	define('__CONFIG__',true);
 	//require the config
 	require("inc/config.php");
-	forceDashboard();
+	
+	Page::forceDashboard();
 ?>
 <!DOCTYPE html>
 <html>

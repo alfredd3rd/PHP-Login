@@ -13,12 +13,11 @@
 
 		$email = Filter::String($_POST['email']);
 
-		//Make sure the user does not exist.
-		$findUser = $con->prepare("SELECT user_id FROM users WHERE email=:email LIMIT 1");
-		$findUser->bindParam(':email',$email,PDO::PARAM_STR);
-		$findUser->execute(); 
+		$user_found = User::Find($email);
 
-		if($findUser->rowCount()==1){
+		//Make sure the user does not exist.
+
+		if($user_found){
 			$array['error'] = "You already have an account";
 			$array['is_logged_in'] = false;
 		}else{
@@ -37,7 +36,7 @@
 			$_SESSION['user_id'] = (int) $user_id;
 			//$array['redirect'] = 'index.php?this-was-a-redirect';
 			$array['is_logged_in'] = true;
-			$array['redirect'] = 'index.php?this-was-a-redirect';
+			$array['redirect'] = 'dashboard.php';
 
 		}
 

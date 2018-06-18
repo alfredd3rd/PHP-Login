@@ -5,7 +5,11 @@
 	require("inc/config.php");
 
 
-	ForceLogin();
+	Page::ForceLogin();
+
+	$User = new User($_SESSION['user_id']);
+
+
 ?>
 
 <!DOCTYPE html>
@@ -19,15 +23,17 @@
 
 
 <div class=".uk-section.uk-container uk-text-center">
+	Dashboard
+
 	<?php 
 
 	echo "Today is: ";
 	echo date("Y m d");
 
 	?>
-<p>You are signed in as User <?php echo $_SESSION['user_id']; ?></p>
+<p>Hello <?php echo $User->email ?>, you registered at <?php echo $User->reg_time; ?></p>
 
-
+<a href="logout.php">Logout</a>
 </div>
 
 <?php require_once "inc/footer.php" ?>
