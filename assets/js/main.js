@@ -91,7 +91,7 @@ $(document).on("submit","form.js-login",function(event){
 			window.location = data.redirect;
 		
 		}else if(data.error !== undefined){
-			_error.text(data.error).show();
+			_error.html(data.error).show();
 		}
 	})
 	.fail(function ajaxFailed(e){
