@@ -4,7 +4,7 @@
 	define('__CONFIG__',true);
 	//require the config
 	require("inc/config.php");
-	
+	forceDashboard();
 ?>
 <!DOCTYPE html>
 <html>

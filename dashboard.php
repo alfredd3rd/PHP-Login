@@ -3,8 +3,9 @@
 	define('__CONFIG__',true);
 	//require the config
 	require("inc/config.php");
-	
-	echo $_SESSION['user_id'].' is you id';
+
+
+	ForceLogin();
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +25,7 @@
 	echo date("Y m d");
 
 	?>
-
+<p>You are signed in as User <?php echo $_SESSION['user_id']; ?></p>
 
 
 </div>
